@@ -1,6 +1,9 @@
 from rest_framework import serializers
 
+from baseservice.core.client_calculator import get_discount
 from baseservice.core.models import User, Product
+
+STATUS_CONNECT = True
 
 
 class UserSerializer(serializers.ModelSerializer):
@@ -10,6 +13,22 @@ class UserSerializer(serializers.ModelSerializer):
 
 
 class ProductSerializer(serializers.ModelSerializer):
+
+    def __init__(self, *args, **kwargs):
+        super(ProductSerializer, self).__init__(*args, **kwargs)
+        self.user_id = self.context["user_id"] or None
+
     class Meta:
         model = Product
         fields = '__all__'
+
+    def to_representation(self, instance):
+        data = super(ProductSerializer, self).to_representation(instance)
+        if not self.user_id:
+            return data
+
+        discount = get_discount(instance.id, self.user_id)
+        if discount:
+            data.update(discount)
+
+        return data
