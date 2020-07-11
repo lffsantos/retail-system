@@ -3,8 +3,6 @@ from rest_framework import serializers
 from baseservice.core.client_calculator import get_discount
 from baseservice.core.models import User, Product
 
-STATUS_CONNECT = True
-
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
@@ -17,6 +15,7 @@ class ProductSerializer(serializers.ModelSerializer):
     def __init__(self, *args, **kwargs):
         super(ProductSerializer, self).__init__(*args, **kwargs)
         self.user_id = self.context["user_id"] or None
+        self.conn_failure = False
 
     class Meta:
         model = Product
@@ -27,8 +26,14 @@ class ProductSerializer(serializers.ModelSerializer):
         if not self.user_id:
             return data
 
-        discount = get_discount(instance.id, self.user_id)
-        if discount:
-            data.update(discount)
+        if self.conn_failure:
+            return data
+
+        try:
+            discount = get_discount(instance.id, self.user_id)
+            if discount:
+                data.update(discount)
+        except Exception as e:
+            self.conn_failure = True
 
         return data
