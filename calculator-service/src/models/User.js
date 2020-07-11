@@ -10,7 +10,7 @@ class User extends Model {
       },
       first_name: DataTypes.STRING,
       last_name: DataTypes.STRING,
-      birth_date: DataTypes.DATEONLY,
+      birthdate: DataTypes.DATEONLY,
     }, {
       timestamps: false,
       sequelize

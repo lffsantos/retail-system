@@ -11,7 +11,7 @@ def create_tables():
             id SERIAL PRIMARY KEY,
             first_name VARCHAR(100) NOT NULL,
             last_name VARCHAR(100) NOT NULL,
-            birth_date DATE NOT NULL
+            birthdate DATE NOT NULL
         )
         """,
         """ CREATE TABLE products (

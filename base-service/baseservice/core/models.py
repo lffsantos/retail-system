@@ -5,7 +5,7 @@ class User(models.Model):
     id = models.AutoField(primary_key=True)
     first_name = models.CharField(max_length=100, null=False, blank=False)
     last_name = models.CharField(max_length=100, null=False, blank=False)
-    birth_date = models.DateField(null=False, blank=False)
+    birthdate = models.DateField(null=False, blank=False)
 
     class Meta:
         ordering = ('first_name',)
