@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+    calculator-service:
+        build: .
+        ports:
+            - "3333:3333"
+        volumes:
+            - .:/src
+        networks:
+            - global-network
+
+
+networks:
+    global-network:
+        external: true
