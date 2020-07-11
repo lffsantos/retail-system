@@ -1,15 +1,26 @@
 const User = require('../models/User');
 const Product = require('../models/Product');
 const Discount = require('../Helpers/Discount');
+const { ErrorHandler } = require('../Helpers/error')
 
 module.exports = {
-  async index(req, res) {
-    const { productId } = req.params;
-    const { userId } = req.query
-    const users = await User.findByPk(userId)
-    const product = await Product.findByPk(productId)
-    const discount = new Discount(product, users)
-    return res.json(discount.getDiscount());
+  async index(req, res, next) {
+    try {
+      const { productId } = req.params;
+      const product = await Product.findByPk(productId)
+      if (!product) {
+        throw new ErrorHandler(404, 'Product Not Found')  
+      }
+      const { userId } = req.query
+      const user = await User.findByPk(userId)
+      if (!user) {
+        throw new ErrorHandler(404, 'User Not Found')  
+      }
+      const discount = new Discount(product, user)
+      return res.json(discount.getDiscount());
+    } catch (error) {
+        return res.json({status: 'error',message: error,})
+    }
   }  
 };
 
