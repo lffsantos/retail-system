@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+*.sqlite3
+*.env
+*.DS_Store
+.venv/
+staticfiles/
+.ipynb_checkpoints/
+.idea
+.baseservice
+.env.prod
