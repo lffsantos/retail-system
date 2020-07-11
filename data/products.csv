@@ -1,2 +1,14 @@
 id,title,description,price,base_discount_percent
 1,Produto 1, Descrição do produto 1, 100.00, 0.10
+2,Produto 2, Descrição do produto 2,50.00,5
+3,Produto 3, Descrição do produto 3,200.00,10
+4,Produto 4, Descrição do produto 4,75.00,3
+5,Produto 5, Descrição do produto 5,16.00,2
+6,Produto 6, Descrição do produto 6,560.00,20
+7,Produto 7, Descrição do produto 7,569.00,25
+8,Produto 8, Descrição do produto 8,293.00,15
+9,Produto 9, Descrição do produto 9,780.00,8
+10,Produto 10, Descrição do produto 10,869.00,10
+11,Produto 11, Descrição do produto 11,48.00,5
+12,Produto 12, Descrição do produto 12,380.00,10
+13,Produto 13, Descrição do produto 13,400.00,0
