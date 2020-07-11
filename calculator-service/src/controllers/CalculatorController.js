@@ -19,7 +19,7 @@ module.exports = {
       const discount = new Discount(product, user)
       return res.json(discount.getDiscount());
     } catch (error) {
-        return res.json({status: 'error',message: error,})
+        return res.status(error.statusCode).json({status: 'error',message: error})
     }
   }  
 };

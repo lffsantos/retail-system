@@ -32,10 +32,9 @@ class Discount {
             discount += rules.date[actualDate]
         }
         
-        date = new Date(this.user.birth_date)
+        date = new Date(this.user.birthdate)
         
-        let birthDate = +parseInt(date.getDate()+1)+'-'+parseInt(date.getMonth()+1)
-
+        let birthDate = +parseInt(date.getDate())+'-'+parseInt(date.getMonth()+1)
         if (actualDate === birthDate){
             discount += rules.birthday
         }
