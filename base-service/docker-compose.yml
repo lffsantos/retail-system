@@ -2,6 +2,7 @@ version: '2'
 
 services:
   web:
+    container_name: base-service
     build: .
     command: python manage.py runserver 0.0.0.0:8000
     volumes:
