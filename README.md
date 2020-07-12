@@ -54,3 +54,12 @@ Esse serviço faz uma consulta para calcular o desconto que cada produto vai ter
         "last_name": "Silva",
         "birthdate": "2020-03-01"
     }
+
+### Como Executar o Projeto:
+Para subir os serviços seguir a ordem de comandos abaixo.
+> make build
+> make loaddata
+
+`make build` inicia os todos os serviços (`postgres`, `base-service`, `calculator-service`)
+`make loaddata` : popula o banco de dados com valores iniciais.
+
