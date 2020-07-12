@@ -9,7 +9,6 @@ class User(models.Model):
 
     class Meta:
         ordering = ('first_name',)
-        managed = False
         db_table = 'users'
 
     def __str__(self):
@@ -25,7 +24,6 @@ class Product(models.Model):
     
     class Meta:
         ordering = ('id',)
-        managed = False
         db_table = 'products'
 
     def __str__(self):

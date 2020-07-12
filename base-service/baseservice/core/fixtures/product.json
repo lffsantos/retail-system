@@ -1,0 +1,132 @@
+[
+{
+  "model": "core.product",
+  "pk": 1,
+  "fields": {
+    "title": "Produto 1",
+    "description": " Descri\u00e7\u00e3o do produto 1",
+    "price": "100.00",
+    "base_discount_percent": 0.1
+  }
+},
+{
+  "model": "core.product",
+  "pk": 2,
+  "fields": {
+    "title": "Produto 2",
+    "description": " Descri\u00e7\u00e3o do produto 2",
+    "price": "50.00",
+    "base_discount_percent": 5.0
+  }
+},
+{
+  "model": "core.product",
+  "pk": 3,
+  "fields": {
+    "title": "Produto 3",
+    "description": " Descri\u00e7\u00e3o do produto 3",
+    "price": "200.00",
+    "base_discount_percent": 10.0
+  }
+},
+{
+  "model": "core.product",
+  "pk": 4,
+  "fields": {
+    "title": "Produto 4",
+    "description": " Descri\u00e7\u00e3o do produto 4",
+    "price": "75.00",
+    "base_discount_percent": 3.0
+  }
+},
+{
+  "model": "core.product",
+  "pk": 5,
+  "fields": {
+    "title": "Produto 5",
+    "description": " Descri\u00e7\u00e3o do produto 5",
+    "price": "16.00",
+    "base_discount_percent": 2.0
+  }
+},
+{
+  "model": "core.product",
+  "pk": 6,
+  "fields": {
+    "title": "Produto 6",
+    "description": " Descri\u00e7\u00e3o do produto 6",
+    "price": "560.00",
+    "base_discount_percent": 20.0
+  }
+},
+{
+  "model": "core.product",
+  "pk": 7,
+  "fields": {
+    "title": "Produto 7",
+    "description": " Descri\u00e7\u00e3o do produto 7",
+    "price": "569.00",
+    "base_discount_percent": 25.0
+  }
+},
+{
+  "model": "core.product",
+  "pk": 8,
+  "fields": {
+    "title": "Produto 8",
+    "description": " Descri\u00e7\u00e3o do produto 8",
+    "price": "293.00",
+    "base_discount_percent": 15.0
+  }
+},
+{
+  "model": "core.product",
+  "pk": 9,
+  "fields": {
+    "title": "Produto 9",
+    "description": " Descri\u00e7\u00e3o do produto 9",
+    "price": "780.00",
+    "base_discount_percent": 8.0
+  }
+},
+{
+  "model": "core.product",
+  "pk": 10,
+  "fields": {
+    "title": "Produto 10",
+    "description": " Descri\u00e7\u00e3o do produto 10",
+    "price": "869.00",
+    "base_discount_percent": 10.0
+  }
+},
+{
+  "model": "core.product",
+  "pk": 11,
+  "fields": {
+    "title": "Produto 11",
+    "description": " Descri\u00e7\u00e3o do produto 11",
+    "price": "48.00",
+    "base_discount_percent": 5.0
+  }
+},
+{
+  "model": "core.product",
+  "pk": 12,
+  "fields": {
+    "title": "Produto 12",
+    "description": " Descri\u00e7\u00e3o do produto 12",
+    "price": "380.00",
+    "base_discount_percent": 10.0
+  }
+},
+{
+  "model": "core.product",
+  "pk": 13,
+  "fields": {
+    "title": "Produto 13",
+    "description": " Descri\u00e7\u00e3o do produto 13",
+    "price": "400.00",
+    "base_discount_percent": 0.0
+  }
+}
+]
