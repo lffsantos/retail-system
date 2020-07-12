@@ -2,6 +2,13 @@
 
 Sistema demo para criação de produtos, usuários, cálculo de desconto em cada produto de acordo com o usuário e datas e/ou eventos especiais.
 
+### Como Executar o Projeto:
+Para subir os serviços seguir a ordem de comandos abaixo.
+> make build  
+> make loaddata
+
+`make build` inicia os todos os serviços (`postgres`, `base-service`, `calculator-service`)  
+`make loaddata` : popula o banco de dados com valores iniciais.
 
 ## Estrutura
 
@@ -54,11 +61,4 @@ Esse serviço faz uma consulta para calcular o desconto que cada produto vai ter
         "birthdate": "2020-03-01"
     }
 
-### Como Executar o Projeto:
-Para subir os serviços seguir a ordem de comandos abaixo.
-> make build  
-> make loaddata
-
-`make build` inicia os todos os serviços (`postgres`, `base-service`, `calculator-service`)  
-`make loaddata` : popula o banco de dados com valores iniciais.
 
