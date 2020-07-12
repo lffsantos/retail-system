@@ -19,5 +19,6 @@
 - [Yarn](https://yarnpkg.com/pt-BR/docs/install)
 
 
-## 🔥 Instalação e execução
+### Como Executar o Serviço:
 
+> make start
