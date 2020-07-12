@@ -20,5 +20,9 @@ Para subir os serviços seguir a ordem de comandos abaixo.
 > make build
 > make loaddata
 
-`make build` inicia o serviço
-`make loaddata` : popula o banco de dados com valores iniciais.
+`make build` inicia o serviço  
+`make loaddata` : popula o banco de dados com valores iniciais.  
+
+### Executar Testes:
+
+> make test  
