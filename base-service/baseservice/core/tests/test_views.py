@@ -75,14 +75,9 @@ class TestProductView(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(len(response.data), len(PRODUCTS))
 
-        # When don't have user_id don't show total_discount and final price
-        if not user_id:
-            for index, product in enumerate(PRODUCTS):
-                self.assertEqual(json.dumps(response.data[index]), json.dumps(product))
-        else:
-            for p in self.products:
-                p['total_discount'] = 5.1
-                p['final_price'] = 94.9
+        for p in self.products:
+            p['total_discount'] = 5.1
+            p['final_price'] = 94.9
 
-            for index, product in enumerate(self.products):
-                self.assertEqual(json.dumps(response.data[index]), json.dumps(product))
+        for index, product in enumerate(self.products):
+            self.assertEqual(json.dumps(response.data[index]), json.dumps(product))

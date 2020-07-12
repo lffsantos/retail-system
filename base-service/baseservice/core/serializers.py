@@ -23,8 +23,6 @@ class ProductSerializer(serializers.ModelSerializer):
 
     def to_representation(self, instance):
         data = super(ProductSerializer, self).to_representation(instance)
-        if not self.user_id:
-            return data
 
         if self.conn_failure:
             return data
