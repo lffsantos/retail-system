@@ -1,14 +1,13 @@
 # Sistema de Varejo
 
-Sistema demo para criação de produtos, usuários e cálculo de desconto em cada produto de acordo com o usuário, e datas e/ou eventos especiais.
+Sistema demo para criação de produtos, usuários, cálculo de desconto em cada produto de acordo com o usuário e datas e/ou eventos especiais.
 
 
 ## Estrutura
 
 O Sistema é composto por 2 serviços;
 
-#### Calculator Service:
-
+#### [Caclulator Service](https://github.com/lffsantos/retail-system/tree/master/calculator-service)  
 Serviço que realiza o cálculo de desconto de cada produto.
 O Serviço recebe o `id` do produto e pode receber o `id` do usuário e realiza o desconto para o produto informado. 
 > curl -X GET  http://localhost:3333/discounts/1/?userId=1
@@ -22,7 +21,7 @@ O Serviço recebe o `id` do produto e pode receber o `id` do usuário e realiza 
     N = Total de desconto do produto em (%)
     V = Valor final do produto com desconto
 
-#### Base Service:
+#### [Base Service](https://github.com/lffsantos/retail-system/tree/master/base-service)    
 
 Serviço que realiza as operações de CRUD de Produtos e Usuários.
 Esse serviço faz uma consulta para calcular o desconto que cada produto vai ter dependedo do usuário.    
@@ -57,9 +56,9 @@ Esse serviço faz uma consulta para calcular o desconto que cada produto vai ter
 
 ### Como Executar o Projeto:
 Para subir os serviços seguir a ordem de comandos abaixo.
-> make build
+> make build  
 > make loaddata
 
-`make build` inicia os todos os serviços (`postgres`, `base-service`, `calculator-service`)
+`make build` inicia os todos os serviços (`postgres`, `base-service`, `calculator-service`)  
 `make loaddata` : popula o banco de dados com valores iniciais.
 
