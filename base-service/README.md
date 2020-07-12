@@ -14,6 +14,8 @@
 
 
 ### Como Executar o Serviço:
+* Crie um arquivo `.env` ele possui as configurações necessárias para execução do serviço.
+
 Para subir os serviços seguir a ordem de comandos abaixo.
 > make build
 > make loaddata
