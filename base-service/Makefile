@@ -8,6 +8,10 @@ migrate:
 start: migrate
 	docker-compose up -d
 
+build:
+	docker-compose up -d --build
+	docker-compose run --rm web python manage.py migrate --noinput
+
 stop:
 	docker-compose down
 
