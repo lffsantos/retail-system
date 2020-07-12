@@ -31,15 +31,19 @@ class Discount {
         if(Object.keys(rules.date).includes(actualDate)) {
             discount += rules.date[actualDate]
         }
+        if (!this.user){
+            return discount
+        }
         
         date = new Date(this.user.birthdate)
-        
+    
         let birthDate = +parseInt(date.getDate())+'-'+parseInt(date.getMonth()+1)
         if (actualDate === birthDate){
             discount += rules.birthday
         }
-
+    
         return discount
+        
     }
 
 }

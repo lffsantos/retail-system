@@ -12,9 +12,12 @@ module.exports = {
         throw new ErrorHandler(404, 'Product Not Found')  
       }
       const { userId } = req.query
-      const user = await User.findByPk(userId)
-      if (!user) {
-        throw new ErrorHandler(404, 'User Not Found')  
+      let user;
+      if (userId != "" && userId !== undefined){
+        user = await User.findByPk(userId)
+        if (!user) {
+          throw new ErrorHandler(404, 'User Not Found')  
+        }
       }
       const discount = new Discount(product, user)
       return res.json(discount.getDiscount());
